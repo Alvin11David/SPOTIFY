@@ -5,5 +5,10 @@ class AppTheme {
   static final lightTheme = ThemeData(
     primaryColor: AppColors.primary,
     ScaffoldBackgroundColor: AppColors.lightBackground,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        
+      )
+    )
   );
 }
