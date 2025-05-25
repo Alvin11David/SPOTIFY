@@ -67,12 +67,59 @@ class GetStartedPage extends StatelessWidget {
                   title: 'Get Started',
                 )
               ],
-            )
+            ),
           ),
 
           Container(
             // ignore: deprecated_member_use
             color: Colors.black.withOpacity(0.15),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 40,
+              horizontal: 40,
+            ),
+            child: Column(
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: SvgPicture.asset(
+                      AppVectors.logo
+                  ),
+                ),
+                  Spacer(),
+                  Text(
+                    'Enjoy Listening To Music',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 21, ),
+                  Text(
+                    'Discover new music, create playlists, and share your favorite tracks with friends.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.center,
+                  ), 
+                  SizedBox(height: 20,),
+                  BasicAppButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => const ChooseModePage()
+                          )
+                      );
+                    },
+                    title: 'Get Started',
+                  )
+                ],
+              ),
           )
         ],
       ),
