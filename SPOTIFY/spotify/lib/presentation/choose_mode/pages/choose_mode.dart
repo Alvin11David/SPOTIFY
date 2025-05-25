@@ -124,7 +124,7 @@ class ChooseModePage extends StatelessWidget {
                         )
                     );
                   },
-                  title: 'Get Started',
+                  title: 'Continue',
                 )
               ],
             ),
