@@ -44,6 +44,7 @@ class ChooseModePage extends StatelessWidget {
                 ),
                 SizedBox(height: 21, ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       height: 50,
