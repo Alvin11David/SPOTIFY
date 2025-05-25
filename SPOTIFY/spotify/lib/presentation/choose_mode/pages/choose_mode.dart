@@ -47,17 +47,17 @@ class ChooseModePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: 80,
+                      width: 80,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle
                       ),
                     ),
-                    SizedBox(width: 20,),
+                    SizedBox(width: 40,),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: 80,
+                      width: 80,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
