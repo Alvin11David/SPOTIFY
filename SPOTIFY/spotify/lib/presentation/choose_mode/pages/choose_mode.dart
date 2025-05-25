@@ -71,7 +71,7 @@ class ChooseModePage extends StatelessWidget {
                         ),
                            SizedBox(height: 25,),
                         Text(
-                          'Light Mode',
+                          'Dark Mode',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 13,
