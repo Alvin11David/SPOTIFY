@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:spotify/common/widgets/button/basic_app_button.dart';
 import 'package:spotify/core/configs/assets/app_images.dart';
 import 'package:spotify/core/configs/assets/app_vectors.dart';
+// ignore: unused_import
 import 'package:spotify/core/configs/theme/app_colors.dart';
 
 class GetStartedPage extends StatelessWidget {
