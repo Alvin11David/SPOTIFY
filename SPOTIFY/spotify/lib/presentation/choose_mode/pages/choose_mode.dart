@@ -43,7 +43,21 @@ class ChooseModePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 21, ),
-                
+                Row(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 20,),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      color: Colors.white,
+                    ),
+                  ],
+                ), 
                 SizedBox(height: 50,),
                 BasicAppButton(
                   onPressed: () {
@@ -79,23 +93,9 @@ class ChooseModePage extends StatelessWidget {
                   ),
                 ),
                   Spacer(),
-                  Text(
-                    'Enjoy Listening To Music',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
+                  
                   SizedBox(height: 21, ),
-                  Text(
-                    'Discover new music, create playlists, and share your favorite tracks with friends.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.center,
-                  ), 
+                   
                   SizedBox(height: 20,),
                   BasicAppButton(
                     onPressed: () {
