@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:spotify/common/widgets/button/basic_app_button.dart';
@@ -42,25 +44,37 @@ class ChooseModePage extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(height: 21, ),
+                SizedBox(height: 40, ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      height: 80,
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle
+                    ClipOval(
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
+                        child: Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            // ignore: deprecated_member_use
+                            color: Color(0xff30393C).withOpacity(0.5),
+                            shape: BoxShape.circle
+                          ),
+                        ),
                       ),
                     ),
                     SizedBox(width: 40,),
-                    Container(
-                      height: 80,
-                      width: 80,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
+                    ClipOval(
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
+                        child: Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                            // ignore: deprecated_member_use
+                            color: Color(0xff30393C).withOpacity(0.5),
+                            shape: BoxShape.circle
+                          ),
+                        ),
                       ),
                     ),
                   ],
