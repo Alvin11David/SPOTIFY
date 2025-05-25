@@ -49,13 +49,19 @@ class ChooseModePage extends StatelessWidget {
                     Container(
                       height: 50,
                       width: 50,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle
+                      ),
                     ),
                     SizedBox(width: 20,),
                     Container(
                       height: 50,
                       width: 50,
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ), 
