@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:spotify/common/widgets/button/basic_app_button.dart';
 import 'package:spotify/core/configs/assets/app_images.dart';
 import 'package:spotify/core/configs/assets/app_vectors.dart';
+import 'package:spotify/core/configs/theme/app_colors.dart';
 
 class ChooseModePage extends StatelessWidget {
   const ChooseModePage({super.key});
@@ -48,23 +49,36 @@ class ChooseModePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ClipOval(
-                      child: BackdropFilter(
-                        filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            // ignore: deprecated_member_use
-                            color: Color(0xff30393C).withOpacity(0.5),
-                            shape: BoxShape.circle
-                          ),
-                          child: SvgPicture.asset(
-                            AppVectors.moon,
-                            fit: BoxFit.none
+                    Column(
+                      children: [
+                        ClipOval(
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
+                            child: Container(
+                              height: 80,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                // ignore: deprecated_member_use
+                                color: Color(0xff30393C).withOpacity(0.5),
+                                shape: BoxShape.circle
+                              ),
+                              child: SvgPicture.asset(
+                                AppVectors.moon,
+                                fit: BoxFit.none
+                              ),
+                            ),
                           ),
                         ),
-                      ),
+                           SizedBox(height: 25,),
+                        Text(
+                          'Light Mode',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 13,
+                            color: AppColors.grey,
+                          ),
+                        ),
+                      ],
                     ),
                     SizedBox(width: 40,),
                     Column(
@@ -89,7 +103,12 @@ class ChooseModePage extends StatelessWidget {
                         ),
                         SizedBox(height: 15,),
                         Text(
-                          'Dark Mode',
+                          'Light Mode',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 13,
+                            color: AppColors.grey,
+                          ),
                         )
                       ],
                     ),
