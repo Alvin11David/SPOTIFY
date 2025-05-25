@@ -124,7 +124,7 @@ class ChooseModePage extends StatelessWidget {
                         )
                     );
                   },
-                  title: 'Continue',
+                  title: 'Continue', color: AppColors.primary,
                 )
               ],
             ),
@@ -162,7 +162,7 @@ class ChooseModePage extends StatelessWidget {
                           )
                       );
                     },
-                    title: 'Continue',
+                    title: 'Continue', color: AppColors.primary,
                   )
                 ],
               ),

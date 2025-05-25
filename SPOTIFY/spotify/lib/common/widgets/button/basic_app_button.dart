@@ -8,7 +8,7 @@ class BasicAppButton extends StatelessWidget {
     required this.onPressed,
     required this.title,
     this.height,
-    super.key
+    super.key, required Color color
     });
 
   @override

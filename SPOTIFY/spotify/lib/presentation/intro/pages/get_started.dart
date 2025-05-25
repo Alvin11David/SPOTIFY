@@ -64,7 +64,7 @@ class GetStartedPage extends StatelessWidget {
                         )
                     );
                   },
-                  title: 'Get Started',
+                  title: 'Get Started', color: Colors.white,
                 )
               ],
             ),
@@ -116,7 +116,7 @@ class GetStartedPage extends StatelessWidget {
                           )
                       );
                     },
-                    title: 'Get Started',
+                    title: 'Get Started', color: Colors.white,
                   )
                 ],
               ),
