@@ -59,23 +59,39 @@ class ChooseModePage extends StatelessWidget {
                             color: Color(0xff30393C).withOpacity(0.5),
                             shape: BoxShape.circle
                           ),
+                          child: SvgPicture.asset(
+                            AppVectors.moon,
+                            fit: BoxFit.none
+                          ),
                         ),
                       ),
                     ),
                     SizedBox(width: 40,),
-                    ClipOval(
-                      child: BackdropFilter(
-                        filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
-                        child: Container(
-                          height: 80,
-                          width: 80,
-                          decoration: BoxDecoration(
-                            // ignore: deprecated_member_use
-                            color: Color(0xff30393C).withOpacity(0.5),
-                            shape: BoxShape.circle
+                    Column(
+                      children: [
+                        ClipOval(
+                          child: BackdropFilter(
+                            filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10), 
+                            child: Container(
+                              height: 80,
+                              width: 80,
+                              decoration: BoxDecoration(
+                                // ignore: deprecated_member_use
+                                color: Color(0xff30393C).withOpacity(0.5),
+                                shape: BoxShape.circle
+                              ),
+                              child: SvgPicture.asset(
+                                AppVectors.sun,
+                                fit: BoxFit.none
+                              ),
+                            ),
                           ),
                         ),
-                      ),
+                        SizedBox(height: 15,),
+                        Text(
+                          'Dark Mode',
+                        )
+                      ],
                     ),
                   ],
                 ), 
