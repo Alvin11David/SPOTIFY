@@ -25,7 +25,14 @@ class GetStartedPage extends StatelessWidget {
                 SvgPicture.asset(
                   AppVectors.logo
                 ),
-                Spacer()
+                Spacer(),
+                Text(
+                  'Enjoy Listening To Music',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  )
+                )
               ],
             )
           ),
