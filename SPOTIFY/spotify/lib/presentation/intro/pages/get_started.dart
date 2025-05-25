@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:spotify/core/configs/assets/app_images.dart';
+import 'package:spotify/core/configs/assets/app_vectors.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
@@ -18,8 +20,21 @@ class GetStartedPage extends StatelessWidget {
                 )
               )
             ),
+            child: Column(
+              children: [
+                SvgPicture.asset(
+                  AppVectors.logo
+                ),
+                Spacer()
+              ],
+            )
+          ),
+
+          Container(
+            // ignore: deprecated_member_use
+            color: Colors.black.withOpacity(0.15),
           )
-        ]
+        ],
       ),
     );
   }
