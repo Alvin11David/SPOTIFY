@@ -16,6 +16,9 @@ class BasicAppbar extends StatelessWidget {
             color: Colors.white.withOpacity(0.03),
             shape: BoxShape.circle,
           ),
+          child: Icon(
+            Icons.arrow_back_ios_new,
+          ),
         ),
       ),
     );
