@@ -16,19 +16,22 @@ class SignUpPage extends StatelessWidget {
           width: 40,
         ),
       ), 
-      body: const Column(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-
+          _registerText()
         ],
       ),
     );
   }
   Widget _registerText() {
-    return Text(
+    return const Text(
       'Register',
       style: TextStyle(
-        fontWeight: FontWeight.bold
+        fontWeight: FontWeight.bold,
+        fontSize: 25,
       ),
-    ),
+      textAlign: TextAlign.center,
+    );
   }
 }
