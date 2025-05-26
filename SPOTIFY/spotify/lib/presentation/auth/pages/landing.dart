@@ -8,7 +8,9 @@ class LandingPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          
+          Align(
+            alignment: Alignment.topRight,
+          )
         ],
       ),
     );
