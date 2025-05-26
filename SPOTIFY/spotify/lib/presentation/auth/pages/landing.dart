@@ -23,6 +23,16 @@ class LandingPage extends StatelessWidget {
               AppImages.authBG,
             )
           ),
+          Align(
+            alignment: Alignment.center,
+            child: Column(
+              children: [
+                SvgPicture.asset(
+                  AppVectors.logo,
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
