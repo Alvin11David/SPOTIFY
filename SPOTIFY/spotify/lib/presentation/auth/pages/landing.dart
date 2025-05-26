@@ -27,44 +27,49 @@ class LandingPage extends StatelessWidget {
           ),
           Align(
             alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  AppVectors.logo,
-                ),
-                SizedBox(height: 55,),
-                const Text(
-                  'Enjoy Listening To Music',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 26,
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 40,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    AppVectors.logo,
                   ),
-                ),
-                SizedBox(height: 21,),
-                const Text(
-                  'Spotify is a proprietary Swedish audio streaming and media service provider  ',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 17,
-                    color: AppColors.grey,
+                  SizedBox(height: 55,),
+                  const Text(
+                    'Enjoy Listening To Music',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 30,),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: BasicAppButton(
-                        onPressed: () {},
-                        title: 'Register', color: AppColors.primary,
-                      ),
-                    )
-                  ],
-                ),
-              ],
+                  SizedBox(height: 21,),
+                  const Text(
+                    'Spotify is a proprietary Swedish audio streaming and media service provider  ',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                      color: AppColors.grey,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 30,),
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: BasicAppButton(
+                          onPressed: () {},
+                          title: 'Register', color: AppColors.primary,
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
