@@ -67,6 +67,12 @@ class LandingPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 20, ), 
+                      TextButton(
+                        onPressed: (){},
+                        child: Text(
+                          'Sign In',
+                        )
+                      ),
                     ],
                   ),
                 ],
