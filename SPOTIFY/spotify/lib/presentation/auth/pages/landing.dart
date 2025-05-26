@@ -65,7 +65,8 @@ class LandingPage extends StatelessWidget {
                           onPressed: () {},
                           title: 'Register', color: AppColors.primary,
                         ),
-                      )
+                      ),
+                      SizedBox(width: 20, ), 
                     ],
                   ),
                 ],
