@@ -26,6 +26,7 @@ class LandingPage extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
                   AppVectors.logo,
