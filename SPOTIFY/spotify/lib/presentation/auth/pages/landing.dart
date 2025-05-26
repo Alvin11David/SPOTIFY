@@ -32,13 +32,21 @@ class LandingPage extends StatelessWidget {
                   AppVectors.logo,
                 ),
                 SizedBox(height: 55,),
-                Text(
+                const Text(
                   'Enjoy Listening To Music',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 26,
                   ),
-                )
+                ),
+                SizedBox(height: 21,),
+                const Text(
+                  'Spotify is a proprietary Swedish audio streaming and media service provider  ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 17,
+                  ),
+                ),
               ],
             ),
           ),
