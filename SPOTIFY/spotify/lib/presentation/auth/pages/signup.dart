@@ -23,4 +23,12 @@ class SignUpPage extends StatelessWidget {
       ),
     );
   }
+  Widget _registerText() {
+    return Text(
+      'Register',
+      style: TextStyle(
+        fontWeight: FontWeight.bold
+      ),
+    ),
+  }
 }
