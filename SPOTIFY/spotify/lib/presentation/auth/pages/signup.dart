@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/common/widgets/appbar/app_bar.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -6,9 +7,10 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: BasicAppbar(), 
       body: Column(
         children: [
-          
+
         ],
       ),
     );
