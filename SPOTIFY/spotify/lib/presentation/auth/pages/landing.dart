@@ -27,6 +27,7 @@ class LandingPage extends StatelessWidget {
             alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(
                   AppVectors.logo,
@@ -46,6 +47,7 @@ class LandingPage extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     fontSize: 17,
                   ),
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),
