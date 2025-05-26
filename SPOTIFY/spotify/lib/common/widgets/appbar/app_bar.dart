@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/common/helpers/is_dark_mode.dart';
 
 class BasicAppbar extends StatelessWidget {
   const BasicAppbar({super.key});
@@ -11,6 +12,8 @@ class BasicAppbar extends StatelessWidget {
       leading: IconButton(
         onPressed: (){},
         icon: Container(
+          height: 50,
+          width: 50,
           decoration: BoxDecoration(
             // ignore: deprecated_member_use
             color: Colors.white.withOpacity(0.03),
@@ -18,6 +21,8 @@ class BasicAppbar extends StatelessWidget {
           ),
           child: Icon(
             Icons.arrow_back_ios_new,
+            size: 15,
+            color: context.isDarkMode ? Colors.white : Colors.black,
           ),
         ),
       ),
