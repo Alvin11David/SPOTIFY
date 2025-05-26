@@ -17,7 +17,7 @@ class LandingPage extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.bottomRight,
             child: SvgPicture.asset(
               AppVectors.bottomPattern,
             ),
