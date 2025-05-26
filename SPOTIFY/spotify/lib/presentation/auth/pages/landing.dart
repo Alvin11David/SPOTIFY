@@ -35,6 +35,7 @@ class LandingPage extends StatelessWidget {
                   'Enjoy Listening To Music',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
+                    fontSize: 26,
                   ),
                 )
               ],
