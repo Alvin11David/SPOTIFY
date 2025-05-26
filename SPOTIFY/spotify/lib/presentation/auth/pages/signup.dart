@@ -12,6 +12,8 @@ class SignUpPage extends StatelessWidget {
       appBar: BasicAppbar(
         title: SvgPicture.asset(
           AppVectors.logo,
+          height: 40,
+          width: 40,
         ),
       ), 
       body: const Column(
