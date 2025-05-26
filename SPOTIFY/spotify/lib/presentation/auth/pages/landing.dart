@@ -30,6 +30,12 @@ class LandingPage extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   AppVectors.logo,
+                ),
+                Text(
+                  'Enjoy Listening To Music',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
                 )
               ],
             ),
