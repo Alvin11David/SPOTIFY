@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -10,6 +11,8 @@ class LandingPage extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topRight,
+            child: SvgPicture.asset()
+            ,
           )
         ],
       ),
