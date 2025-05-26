@@ -67,11 +67,19 @@ class LandingPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 20, ), 
-                      TextButton(
-                        onPressed: (){},
-                        child: Text(
-                          'Sign In',
-                        )
+                      Expanded(
+                        flex: 1,
+                        child: TextButton(
+                          onPressed: (){},
+                          child: Text(
+                            'Sign In',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Colors.white,
+                            ),
+                          )
+                        ),
                       ),
                     ],
                   ),
