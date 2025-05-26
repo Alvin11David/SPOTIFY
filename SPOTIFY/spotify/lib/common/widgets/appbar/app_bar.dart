@@ -10,7 +10,9 @@ class BasicAppbar extends StatelessWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.pop(context);
+        },
         icon: Container(
           height: 50,
           width: 50,
