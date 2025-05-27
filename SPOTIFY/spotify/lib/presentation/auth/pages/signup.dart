@@ -16,11 +16,18 @@ class SignUpPage extends StatelessWidget {
           width: 40,
         ),
       ), 
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          _registerText()
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 50,
+          horizontal: 30
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            _registerText(),
+            _fullNameField()
+          ],
+        ),
       ),
     );
   }
@@ -32,6 +39,12 @@ class SignUpPage extends StatelessWidget {
         fontSize: 25,
       ),
       textAlign: TextAlign.center,
+    );
+  }
+
+  Widget _fullNameField() {
+    return TextField(
+      
     );
   }
 }
