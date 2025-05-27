@@ -44,7 +44,7 @@ class SignUpPage extends StatelessWidget {
 
   Widget _fullNameField() {
     return TextField(
-      
+      decoration: InputDecoration()
     );
   }
 }
