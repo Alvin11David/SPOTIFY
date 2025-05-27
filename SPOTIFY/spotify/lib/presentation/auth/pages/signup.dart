@@ -27,7 +27,7 @@ class SignUpPage extends StatelessWidget {
             _registerText(),
             const SizedBox(height: 50,),
             _fullNameField(context),
-            const SizedBox(height: 50,),
+            const SizedBox(height: 20,),
             _emailField(context)
           ],
         ),
