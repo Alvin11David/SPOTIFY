@@ -12,6 +12,10 @@ class AppTheme {
         filled: true,
         fillColor: Colors.transparent,
         contentPadding: const EdgeInsets.all(30),
+         hintStyle: TextStyle(
+          color: Color(0xffA7A7A7),
+          fontWeight: FontWeight.w500,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
           borderSide: const BorderSide(
@@ -47,6 +51,10 @@ class AppTheme {
     inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.transparent,
+        hintStyle: TextStyle(
+          color: Color(0xffA7A7A7),
+          fontWeight: FontWeight.w500,
+        ),
         contentPadding: const EdgeInsets.all(30),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
