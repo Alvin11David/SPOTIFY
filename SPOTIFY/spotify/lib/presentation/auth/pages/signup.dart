@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:spotify/common/widgets/appbar/app_bar.dart';
+import 'package:spotify/common/widgets/button/basic_app_button.dart';
 import 'package:spotify/core/configs/assets/app_vectors.dart' show AppVectors;
 
 class SignUpPage extends StatelessWidget {
@@ -28,7 +29,15 @@ class SignUpPage extends StatelessWidget {
             const SizedBox(height: 50,),
             _fullNameField(context),
             const SizedBox(height: 20,),
-            _emailField(context)
+            _emailField(context),
+            const SizedBox(height: 20,),
+            _passwordField(context),
+            const SizedBox(height: 50,),
+            BasicAppButton(
+              onPressed: (){}, 
+              title: 'Create Account', 
+              color: Colors.blue, 
+            )
           ],
         ),
       ),
@@ -59,6 +68,16 @@ class SignUpPage extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: 'Enter Your Email',
+      ).applyDefaults(
+        Theme.of(context).inputDecorationTheme
+      ),
+    );
+  }
+
+  Widget _passwordField(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        hintText: 'Enter Your Password',
       ).applyDefaults(
         Theme.of(context).inputDecorationTheme
       ),
