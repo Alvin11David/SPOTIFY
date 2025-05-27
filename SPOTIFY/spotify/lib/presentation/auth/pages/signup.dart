@@ -25,6 +25,7 @@ class SignUpPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             _registerText(),
+            const SizedBox(height: 50,),
             _fullNameField()
           ],
         ),
@@ -47,8 +48,10 @@ class SignUpPage extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.all(15),
-        border: OutlineInputBorder()
+        contentPadding: const EdgeInsets.all(30),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30)
+        )
       ),
     );
   }
