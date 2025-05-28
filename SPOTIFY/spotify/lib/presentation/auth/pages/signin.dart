@@ -28,15 +28,13 @@ class SignInPage extends StatelessWidget {
           children: [
             _registerText(),
             const SizedBox(height: 40,),
-            _fullNameField(context),
-            const SizedBox(height: 20,),
             _emailField(context),
             const SizedBox(height: 20,),
             _passwordField(context),
             const SizedBox(height: 40,),
             BasicAppButton(
               onPressed: (){}, 
-              title: 'Create Account', 
+              title: 'Sign In', 
               color: Colors.blue, 
             )
           ],
@@ -52,16 +50,6 @@ class SignInPage extends StatelessWidget {
         fontSize: 25,
       ),
       textAlign: TextAlign.center,
-    );
-  }
-
-  Widget _fullNameField(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: 'Full Name',
-      ).applyDefaults(
-        Theme.of(context).inputDecorationTheme
-      ),
     );
   }
 
