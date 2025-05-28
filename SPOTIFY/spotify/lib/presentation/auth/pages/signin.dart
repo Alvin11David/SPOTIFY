@@ -46,7 +46,7 @@ class SignInPage extends StatelessWidget {
   }
   Widget _registerText() {
     return const Text(
-      'Register',
+      'Sign In',
       style: TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: 25,
