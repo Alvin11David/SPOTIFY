@@ -103,7 +103,7 @@ class SignIpPage extends StatelessWidget {
           TextButton(
             onPressed: (){},
             child: const Text(
-              'Sign Un'
+              'Register Now'
             ),
           ),
         ],
