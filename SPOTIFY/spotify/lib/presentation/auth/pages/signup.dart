@@ -10,10 +10,11 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: _signinText(context),
       appBar: BasicAppbar(
         title: SvgPicture.asset(
           AppVectors.logo,
-          height: 40,
+          height: 30,
           width: 40,
         ),
       ), 
@@ -26,13 +27,13 @@ class SignUpPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             _registerText(),
-            const SizedBox(height: 50,),
+            const SizedBox(height: 40,),
             _fullNameField(context),
             const SizedBox(height: 20,),
             _emailField(context),
             const SizedBox(height: 20,),
             _passwordField(context),
-            const SizedBox(height: 50,),
+            const SizedBox(height: 40,),
             BasicAppButton(
               onPressed: (){}, 
               title: 'Create Account', 
@@ -80,6 +81,32 @@ class SignUpPage extends StatelessWidget {
         hintText: 'Enter Your Password',
       ).applyDefaults(
         Theme.of(context).inputDecorationTheme
+      ),
+    );
+  }
+
+  Widget _signinText(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: 30, 
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+          'Do you have an account?',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+          ),
+          ),
+          TextButton(
+            onPressed: (){},
+            child: const Text(
+              'Sign In'
+            ),
+          ),
+        ],
       ),
     );
   }
