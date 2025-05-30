@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show BuildContext, Scaffold, StatelessWidget, Widget;
+import 'package:flutter/material.dart' show BuildContext, Scaffold, StatelessWidget, Widget, TabBar;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:spotify/common/widgets/appbar/app_bar.dart' show BasicAppbar;
@@ -23,7 +23,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _homeTopCard()
+            _homeTopCard(),
+            _tabs()
           ],
           )
       )
@@ -31,10 +32,9 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _homeTopCard() {
-    // ignore: sized_box_for_whitespace
     return Center(
-      child: Container(
-        height: 188,
+      child: SizedBox(
+        height: 140,
         child: Stack(
           children: [
             Align(
@@ -43,16 +43,39 @@ class HomePage extends StatelessWidget {
                 AppVectors.homeTopCard
               ),
             ),
-
             Align(
               alignment: Alignment.bottomRight,
-              child: Image.asset(
-                AppImages.homeArtist
+              child: Padding(
+                padding: EdgeInsets.only(
+                  right: 60,
+                ),
+                child: Image.asset(
+                  AppImages.homeArtist
+                ),
               ),
             )
           ],
         ),
       ),
     );
+  }
+
+  Widget _tabs() {
+    return TabBar(
+      tabs: [
+        Text(
+          'News'
+        ),
+        Text(
+          'Videos'
+        ),
+        Text(
+          'Artists'
+        ),
+        Text(
+          'Podcats'
+        ),
+      ],
+      );
   }
 }
