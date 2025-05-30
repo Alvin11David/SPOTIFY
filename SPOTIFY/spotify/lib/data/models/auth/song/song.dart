@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart' show Timestamp;
+import 'package:spotify/domain/entities/auth/song/song.dart' show SongEntity;
 
 class SongModel {
   String ? title;
@@ -18,5 +19,17 @@ class SongModel {
     artist =  data['artist'];
     duration = data['duration'];
     releaseDate = data['releaseDate'];
+  }
+}
+
+extension SongModelX on SongModel {
+  SongEntity toEntity() {
+    return SongEntity(
+      title: title!,
+      artist: artist!,
+      duration: duration!,
+      releaseDate: releaseDate!
+    );
+
   }
 }
