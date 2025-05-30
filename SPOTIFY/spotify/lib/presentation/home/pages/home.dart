@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show BuildContext, Scaffold, StatelessWidget, TabBar, TabController, Widget, Colors;
+import 'package:flutter/material.dart' show BuildContext, Scaffold, TabBar, TabController, Widget, Colors;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:spotify/common/helpers/is_dark_mode.dart';
@@ -88,16 +88,32 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       ),
       tabs: [
         Text(
-          'News'
+          'News',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16
+          )
         ),
         Text(
-          'Videos'
+          'Videos',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16
+          )
         ),
         Text(
-          'Artists'
+          'Artists',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16
+          )
         ),
         Text(
-          'Podcats'
+          'Podcats',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 16
+          )
         ),
       ],
       );
