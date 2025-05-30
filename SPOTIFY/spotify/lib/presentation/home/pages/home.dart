@@ -5,6 +5,7 @@ import 'package:spotify/common/helpers/is_dark_mode.dart';
 import 'package:spotify/common/widgets/appbar/app_bar.dart' show BasicAppbar;
 import 'package:spotify/core/configs/assets/app_images.dart' show AppImages;
 import 'package:spotify/core/configs/assets/app_vectors.dart' show AppVectors;
+import 'package:spotify/core/configs/theme/app_colors.dart' show AppColors;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -78,7 +79,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget _tabs() {
     return TabBar(
       controller: _tabController,
+      isScrollable: true,
       labelColor: context.isDarkMode ? Colors.white : Colors.black,
+      indicatorColor: AppColors.primary,
       padding: EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 40
