@@ -6,7 +6,7 @@ import 'package:spotify/core/configs/assets/app_vectors.dart' show AppVectors;
 import 'package:spotify/data/models/auth/signin_user_req.dart';
 import 'package:spotify/domain/repository/usecases/auth/signin.dart' show SigninUseCase;
 import 'package:spotify/presentation/auth/pages/signup.dart';
-import 'package:spotify/presentation/root/pages/root.dart' show RootPage;
+import 'package:spotify/presentation/home/pages/home.dart' show  HomePage;
 import 'package:spotify/service_locator.dart' show sl;
 
 class SignInPage extends StatelessWidget {
@@ -56,7 +56,7 @@ class SignInPage extends StatelessWidget {
                   (r){
                     Navigator.pushAndRemoveUntil(
                       context,
-                      MaterialPageRoute(builder: (BuildContext context) =>  RootPage()),
+                      MaterialPageRoute(builder: (BuildContext context) =>  HomePage()),
                       (route) => false
                     );
                   }
