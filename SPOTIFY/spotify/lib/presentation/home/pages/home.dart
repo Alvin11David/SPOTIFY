@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BasicAppbar(
+        hideBack: true,
         title: SvgPicture.asset(
           AppVectors.logo,
           height: 30,
