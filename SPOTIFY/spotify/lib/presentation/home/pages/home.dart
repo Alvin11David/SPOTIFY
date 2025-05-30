@@ -1,13 +1,28 @@
-import 'package:flutter/material.dart' show BuildContext, Scaffold, StatelessWidget, Widget, TabBar;
+import 'package:flutter/material.dart' show BuildContext, Scaffold, StatelessWidget, TabBar, TabController, Widget, Colors;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
+import 'package:spotify/common/helpers/is_dark_mode.dart';
 import 'package:spotify/common/widgets/appbar/app_bar.dart' show BasicAppbar;
 import 'package:spotify/core/configs/assets/app_images.dart' show AppImages;
 import 'package:spotify/core/configs/assets/app_vectors.dart' show AppVectors;
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState(){
+    super.initState();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +77,12 @@ class HomePage extends StatelessWidget {
 
   Widget _tabs() {
     return TabBar(
+      controller: _tabController,
+      labelColor: context.isDarkMode ? Colors.white : Colors.black,
+      padding: EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 40
+      ),
       tabs: [
         Text(
           'News'
