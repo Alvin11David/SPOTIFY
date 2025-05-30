@@ -27,10 +27,10 @@ class SignUpPage extends StatelessWidget {
           width: 40,
         ),
       ), 
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(
-          vertical: 50,
-          horizontal: 30
+        vertical: 50,
+        horizontal: 30
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,7 +63,7 @@ class SignUpPage extends StatelessWidget {
                       context,
                       MaterialPageRoute(builder: (BuildContext context) =>  RootPage()),
                       (route) => false
-
+        
                     );
                   }
                 );
