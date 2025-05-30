@@ -31,10 +31,20 @@ class HomePage extends StatelessWidget {
 
   Widget _homeTopCard() {
     // ignore: sized_box_for_whitespace
-    return Container(
-      height: 188,
-      child: SvgPicture.asset(
-        AppVectors.homeTopCard
+    return Center(
+      child: Container(
+        height: 188,
+        child: Stack(
+          children: [
+            SvgPicture.asset(
+              AppVectors.homeTopCard
+            ),
+
+            Image.asset(
+              
+            )
+          ],
+        ),
       ),
     );
   }
