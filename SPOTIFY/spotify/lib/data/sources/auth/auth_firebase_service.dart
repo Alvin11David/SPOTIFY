@@ -12,8 +12,25 @@ abstract class AuthFirebaseService {
 class AuthFirebaseServicesImpl extends AuthFirebaseService {
   @override
   Future<void> signin() {
-    // TODO: implement signin
-    throw UnimplementedError();
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: createUserReq.email,
+        password: createUserReq.password
+        );
+
+        return const Right('SignUp Was Successful');
+
+    } on FirebaseAuthException catch (e) {
+      String message = '';
+
+      if(e.code == 'weak-password') {
+        message == "The Password Provided is too weak";
+      } else if(e.code == 'email-already-in-use') {
+        message == "An Account already exists with that email.";
+      }
+      return Left(message);
+    }
+  }
   }
 
   @override
