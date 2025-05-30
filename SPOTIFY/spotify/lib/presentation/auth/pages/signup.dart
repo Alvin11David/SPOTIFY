@@ -43,8 +43,9 @@ class SignUpPage extends StatelessWidget {
             _passwordField(context),
             const SizedBox(height: 40,),
             BasicAppButton(
-              onPressed: (){
-                var result = await sl<SignupUseCase().call(
+              onPressed: () async {
+                // ignore: await_only_futures
+                var result = await sl<SignupUseCase>().call(
                   params: CreateUserReq(
                     fullName: _fullName.text.toString(), 
                     email: _email.text.toString(), 
@@ -52,8 +53,8 @@ class SignUpPage extends StatelessWidget {
                   )
                 );
                 result.fold(
-                  (1){
-                    var snackbar = SnackBar(content: Text(1));
+                  (l){
+                    var snackbar = SnackBar(content: Text(l.toString()));
                     ScaffoldMessenger.of(context).showSnackBar(snackbar);
                   }, 
                   (r){}
