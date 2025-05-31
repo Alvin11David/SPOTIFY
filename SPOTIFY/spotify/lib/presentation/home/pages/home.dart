@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart' show BuildContext, Scaffold, TabBar, TabController, Widget, Colors;
+import 'package:flutter/material.dart' show BuildContext, Colors, Scaffold, TabBar, TabController, Widget, TabBarView;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart' show SvgPicture;
 import 'package:spotify/common/helpers/is_dark_mode.dart';
@@ -6,6 +6,7 @@ import 'package:spotify/common/widgets/appbar/app_bar.dart' show BasicAppbar;
 import 'package:spotify/core/configs/assets/app_images.dart' show AppImages;
 import 'package:spotify/core/configs/assets/app_vectors.dart' show AppVectors;
 import 'package:spotify/core/configs/theme/app_colors.dart' show AppColors;
+import 'package:spotify/presentation/home/widgets/news_songs.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,7 +41,20 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _homeTopCard(),
-            _tabs()
+            _tabs(),
+            SizedBox(
+              height: 260,
+              child: TabBarView(
+                controller: _tabController,
+                children: [
+                  const NewsSongs(),
+                  Container(),
+                  Container(),
+                  Container(),
+              
+                ],
+              ),
+            )
           ],
           )
       )

@@ -10,13 +10,16 @@ class NewsSongs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => NewsSongsCubit(),
+      create: (_) => NewsSongsCubit()..getNewsSongs(),
       child: SizedBox(
         height: 200,
         child: BlocBuilder<NewsSongsCubit, NewsSongsState> (
           builder: (context,state){
             if (state is NewsSongsLoading) {
-              return const CircularProgressIndicator();
+              return Container(
+                alignment: Alignment.center,
+                child: const CircularProgressIndicator()
+              );
             }
 
             if (state is NewsSongsLoaded) {
@@ -34,10 +37,23 @@ class NewsSongs extends StatelessWidget {
 
   Widget _songs(List<SongEntity> songs) {
     return ListView.separated(
-      scrollDirection: Axis.horizontal,,
+      scrollDirection: Axis.horizontal,
           itemBuilder: (context,index) {
-            return Column(
-
+            return SizedBox(
+              width: 160,
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(
+                          
+                        )
+                        )
+                    )
+                  )
+                ]
+              ),
             );
           },
           separatorBuilder: (context,index) => SizedBox(width: 14,),
