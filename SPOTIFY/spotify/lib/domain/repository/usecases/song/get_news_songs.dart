@@ -8,5 +8,4 @@ class GetNewsSongsUseCase implements UseCase<Either,dynamic> {
   Future<Either> call({params}) async {
     return await sl<SongRepositoryImpl>().getNewsSongs();
   }
-  
 }
