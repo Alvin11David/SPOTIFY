@@ -30,6 +30,5 @@ extension SongModelX on SongModel {
       duration: duration!,
       releaseDate: releaseDate!
     );
-
   }
 }

@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:spotify/core/configs/constants/app_urls.dart';
 import 'package:spotify/domain/entities/auth/song/song.dart';
 import 'package:spotify/presentation/home/bloc/news_songs_cubit.dart';
 import 'package:spotify/presentation/home/bloc/news_songs_state.dart';
@@ -43,14 +46,18 @@ class NewsSongs extends StatelessWidget {
               width: 160,
               child: Column(
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          
-                        )
-                        )
-                    )
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            AppURLs.firestorage + songs[index].artist + ' - ' + songs[index].title + '.jpg' + AppURLs.mediaAlt
+                          )
+                          )
+                      )
+                    ),
                   )
                 ]
               ),
