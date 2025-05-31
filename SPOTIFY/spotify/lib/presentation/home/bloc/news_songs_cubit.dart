@@ -1,11 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart' show Cubit;
 import 'package:spotify/domain/repository/usecases/song/get_news_songs.dart';
-import 'package:spotify/presentation/home/bloc/news_songs_state.dart' show NewsSongsState, NewsSongsLoadFailure, NewsSongsLoaded;
+import 'package:spotify/presentation/home/bloc/news_songs_state.dart' show NewsSongsLoadFailure, NewsSongsLoaded, NewsSongsState, NewsSongsLoading;
 import 'package:spotify/service_locator.dart' show sl;
 
 class NewsSongsCubit extends Cubit<NewsSongsState> {
 
-  NewsSongsCubit(super.initialState);
+  NewsSongsCubit() : super(NewsSongsLoading());
 
   Future<void> getNewsSongs() async {
 
